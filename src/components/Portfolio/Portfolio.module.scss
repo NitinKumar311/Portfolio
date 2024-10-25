@@ -1,40 +1,131 @@
 @import '../../styles/contants.scss';
 
-.wrapper{
+.wrapper {
     background: white;
     overflow: hidden;
-    .container{
-        flex-direction: column;
-        gap: 2rem;
-        .heading{
-            width: 100%;
-            justify-content: space-between;
-            align-items: flex-end;
-            flex-wrap: wrap; 
-            >:nth-child(2)
-            {
-                text-decoration: underline;
-                color: orange;
-                cursor: pointer;
-            }
-        }    
-        
-        .showCase{
-            width: 100%;
-            gap: 1.5rem;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            >img{
-
-                @media (max-width: $sm) {
-                    width: 100%;
-                }
-                border-radius: 20px;
-                max-width: 25rem;
-                max-height: 18rem;
-                box-shadow: 0px 21px 13px rgba(0, 0, 0, 13%);
-                cursor: pointer;
-            }
+    .container {
+      flex-direction: column;
+      gap: 2rem;
+      .heading {
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        > :nth-child(2) {
+          text-decoration: underline;
+          color: orange;
+          cursor: pointer;
         }
+      }
+      .showCase {
+        width: 100%;
+        gap: 1.5rem;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        > img {
+          @media (max-width: $sm) {
+            width: 100%;
+          }
+          border-radius: 20px;
+          max-width: 25rem;
+          max-height: 18rem;
+          box-shadow: 0px 21px 13px rgba(0, 0, 0, 13%);
+          cursor: pointer;
+        }
+      }
     }
-}
+  }
+  
+  .modalBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContent {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modalButtons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+  
+    .button {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient for a modern look */
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #5a0fb8, #1a6bdb); /* Darker gradient on hover */
+      }
+  
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+  
+  .closeButton {
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #ff5f57; /* Close button with a red tone */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+  
+    &:hover {
+      background: #e44d47;
+      transform: scale(1.05);
+    }
+  
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .modalContent {
+      padding: 1.5rem;
+    }
+  
+    .modalButtons {
+      flex-direction: column;
+      gap: 1rem;
+  
+      .button {
+        width: 100%;
+      }
+    }
+  
+    .closeButton {
+      width: 100%;
+    }
+  }
+  

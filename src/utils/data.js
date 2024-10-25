@@ -3,23 +3,23 @@ import { CiMobile1 } from "react-icons/ci";
 import { MdWorkspacesOutline } from "react-icons/md";
 export const projectExperience = [
   {
-    name: "Website Design",
-    projects: 76,
+    name: "React Developer",
+    projects: 2,
     icon: HiOutlineDesktopComputer,
     bg: "#286F6C",
   },
-  {
-    name: "Mobile App Design",
-    projects: 63,
-    icon: CiMobile1,
-    bg: "#EEC048",
-  },
-  {
-    name: "Brand Identity",
-    projects: 47,
-    icon: MdWorkspacesOutline,
-    bg: "#F26440",
-  },
+  // {
+  //   name: "Mobile App Design",
+  //   projects: 0,
+  //   icon: CiMobile1,
+  //   bg: "#EEC048",
+  // },
+  // {
+  //   name: "Brand Identity",
+  //   projects: 1,
+  //   icon: MdWorkspacesOutline,
+  //   bg: "#F26440",
+  // },
 ];
 
 export const WhatDoIHelp = [
@@ -29,25 +29,25 @@ export const WhatDoIHelp = [
 
 export const workExp = [
   {
-    place: "Self-Employed, Brisbane",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Visual Designer",
+    place: "Mern Stack Developer",
+    tenure: "April 2024 - Parsent",
+    role: "React Developer",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Aspiring MERN stack developer passionate about building dynamic web applications and learning new technologies. Eager to contribute to a collaborative team and grow in a challenging environment where skills in MongoDB, Express.js, React, and Node.js can be applied.",
   },
   {
-    place: "New Man Services",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "UI/UX Designer",
+    place: "React Developer",
+    tenure: "Dec 2023 - Dec 2023",
+    role: "Self - Employeed",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Aspiring React developer passionate about building dynamic web applications. Eager to contribute to a collaborative team and grow in a challenging environment where skills in React, and Node.js can be applied.",
   },
   {
-    place: "Global Solution",
-    tenure: "Aug 2014 - Sep 2016",
-    role: "Sr. Product Designer",
+    place: "React Developer",
+    tenure: "Jan 2024 - Jan 2024",
+    role: "Self - Employeed",
     detail:
-      "A visual desginer dsesign for a variety of platoforms, may include internet and internet sites, games, movies, kioasks and wearbies. In short, they create the concepts",
+      "Aspiring React developer passionate about building dynamic web applications. Eager to contribute to a collaborative team and grow in a challenging environment where skills in React, and Node.js can be applied.",
   },
 ];
 

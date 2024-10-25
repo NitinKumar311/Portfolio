@@ -1,90 +1,107 @@
 @import './../../styles/contants.scss';
 
 .wrapper {
-    position: relative;
-    z-index: 99;
-    opacity: 1;
-    transform: none;
     position: sticky;
-    top: 0px;
+    top: 0;
+    z-index: 99;
     transition: all 300ms ease;
+    background-color: $primary; // Ensure you have this variable defined
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Add subtle shadow for depth
 
     .container {
-        position: relative;
+        display: flex;
         justify-content: space-between;
-        font-weight: 500;
+        align-items: center;
+        padding: 1rem 2rem;
 
         .name {
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 2rem; // Increased font size for emphasis
+            font-weight: bold;
+            color: text-color; // Use a variable for better color management
+            text-decoration: none;
+            transition: color 200ms ease-in-out;
+
+            &:hover {
+                color: $secondary; // Add hover effect
+            }
         }
 
         .menu {
-
-            @media (max-width: $sm),
-            (max-width: $md) {
-                position: absolute;
-                list-style: none;
-                gap: 2rem;
-                font-weight: 500;
-                flex-direction: column;
-                right: 0;
-                top: 3rem;
-                height: calc(100vh - 6.3rem);
-                width: 50%;
-                min-width: 15rem;
-                background: white;
-                padding: 2rem;
-                display: flex;
-                border-radius: 10px;
-                transition: all 200ms ease;
-                align-items: flex-start;
-                padding: 3rem;
-                justify-content: flex-start;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-            }
-
-            text-transform: uppercase;
-            font-size: 1rem;
+            display: flex;
+            align-items: center;
             list-style: none;
-            gap: 1.5rem;
-            cursor: pointer;
+            gap: 2rem;
+            transition: transform 300ms ease-in-out;
 
             li {
                 a {
-                    color: inherit;
+                    color: text-color; // Use a variable for better color management
+                    font-size: 1.1rem;
+                    text-transform: uppercase;
                     text-decoration: none;
+                    transition: color 200ms ease-in-out;
+
+                    &:hover {
+                        color: $secondary; // Ensure you have this variable defined
+                        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); // Subtle text shadow
+                    }
                 }
 
-                &:hover {
-                    color: $secondary;
+                .phone {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    svg {
+                        color: $secondary; // Ensure you have this variable defined
+                        background-color: phone-bg; // Ensure you have this variable defined
+                        padding: 10px;
+                        border-radius: 50%;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+                        transition: transform 200ms ease-in-out;
+
+                        &:hover {
+                            transform: scale(1.1); // Hover effect on the icon
+                        }
+                    }
                 }
             }
 
-            .phone {
-                gap: 1.2rem;
-                flex-wrap: wrap;
+            // Responsive styles for mobile screens
+            @media (max-width: 768px) {
+                position: absolute;
+                top: 4rem;
+                right: 0;
+                width: 100%;
+                height: calc(100vh - 4rem); // Full height minus header height
+                flex-direction: column;
+                align-items: center;
+                background: white; // Ensure you have this variable defined
+                border-radius: 0 0 10px 10px;
+                padding: 1rem; // Adjust padding to reduce height
+                z-index: 1000;
+                transform: translateY(-100%); // Initially hidden
+                opacity: 0; // Start with hidden opacity
+                transition: opacity 300ms ease-in-out, transform 300ms ease-in-out; // Add transition
 
-                svg {
-                    color: $secondary;
-                    background-color: white;
-                    padding: 10px;
-                    border-radius: 999px;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                // Apply transformation based on menuOpened state
+                &.open {
+                    transform: translateY(0);
+                    opacity: 1; // Fade in effect
                 }
             }
         }
 
-
-
         .menuIcon {
+            display: none; // Default hidden on larger screens
+            cursor: pointer;
 
-            @media (max-width: $sm),
-            (max-width: $md) {
-                display: block;
+            @media (max-width: 768px) {
+                display: block; // Show on mobile
+                color: black; // Change color to black for toggle button
+                font-size: 2rem; // Increase size for better touch target
             }
-
-            display: none;
         }
     }
 }
