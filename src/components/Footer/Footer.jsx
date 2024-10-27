@@ -23,7 +23,7 @@ const Footer = () => {
             amazing together.
           </span>
           <span className="primaryText">
-            Start by <a href="mailto:zainkeepscode@gmail.com">saying hi</a>
+            Start by <a href="mailto:nitinofficial2001@gmail.com">saying hi</a>
           </span>
         </div>
 
